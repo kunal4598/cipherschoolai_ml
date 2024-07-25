@@ -1,0 +1,193 @@
+
+#variables
+
+name="John Doe"
+age="30"
+height=5.9
+
+#data types
+num=10
+#inbuild data types
+print(abs(num))  #absolute value
+print(bin(num)) #binary format
+
+print(pow(num,2))
+print(divmod(num,3)) #(3,1)  #(Q,R)
+#float
+price=99.99
+print(round(price,1)) 
+print(round(price)) 
+print(int(price)) #99
+print(float("123.45")) 
+
+print(price.is_integer())
+
+#STRING
+s="Hello world"
+print(s.upper())
+print(s.lower())
+print(s.replace("world","Python"))
+print(len(s))
+#List
+fruits=["apple","banana","cherry"]
+fruits.append("orange")
+print(fruits)
+fruits.remove("banana")
+fruits.pop()
+print(fruits)
+
+fruits.append("melon")
+#fruits.append("aa")
+fruits.sort()
+print(fruits)
+fruits.reverse()
+print(fruits)
+print(len(fruits))
+print(fruits.index("apple"))
+print(fruits.count("apple"))
+print("apple" in fruits)
+
+
+#TUPLES  #immutable i.e unchangeable
+coordinates=(10.0,20.0)
+print(coordinates[1])
+#coordinates[1]=30.0  #TypeError: 'tuple' object does not support item
+
+print(coordinates.count(10.0))
+li=list(coordinates)
+print(li)
+li[1]="hi"
+print(tuple(li))
+
+
+#Dictionary
+person={"name":"John","age":30,"city":"New York"}
+print(person.keys())
+print(person.items())
+print(person.get("name"))
+person.update({"height":189})
+
+print(person)
+person.pop("age")
+print(person)
+
+#SET
+se={1,2,3,4}
+se1={1,1,1,1} #no duplicates
+li1=[1,1,1,1]
+tu1=(1,1,1,1)
+print(li1)
+print(tu1)
+print(se1)
+#sets are unordered hence no index
+
+print(len(se))
+se.add(9)
+se.update({10,11,12})  #add another set
+se.remove(10)
+print(se)
+
+
+#Boolean
+b= True
+print(int(b))
+print(bool(6))
+print(bool(s))
+
+print(b and False)
+print(b or False)
+print(not b)
+
+#CONDITIONALS
+age= 16
+if age>18:
+    print("You are eligible to vote")
+elif age==18:
+    print("You are 18")
+else:
+    print("you are minor")
+
+    #check even odd
+    number=42
+    if number%2==0:
+        print("even")
+    else:
+        print("odd")
+
+
+#grade check
+grade= 85
+if grade>=90:
+    print("A")
+elif grade>=80:
+     print("B")
+elif grade>=70:
+ print("c")
+elif grade<=40:
+   print("F")
+else:
+   print("D")
+
+
+
+#bmi
+w=75
+h=1.75
+bmi=w/(h**2)
+if bmi<18.5:
+    print("Underweight")
+else:
+    if bmi<24.9:
+        print("Normal")
+    else:
+        if bmi<29.9:
+            print("Overweight")
+        else:
+            print("Obese")
+
+#LOOPS
+for i in range(5):
+    print(i)
+
+for f in fruits:
+    print(f)
+
+for j in range(0,10,2):
+  print(j)
+
+#Nested loop
+for i in range(3):
+ for j in range(2):
+     print("i=" , i, "j=", j)
+ #enumerate
+ for index , fruit in enumerate(fruits):
+     print(f"{index}: {fruit}")
+
+#while loop
+count=0
+while count<5:
+    print(count)
+    count+=1
+
+count =0
+while True:
+    print(count)
+    count+=1
+
+    if count>5:
+        break
+
+countdown =10
+while countdown>=0:
+  print(countdown)
+  countdown -=1
+  print("blast")
+
+
+password = " "
+while len(password) < 8:
+    password = input("Enter password of at least 8 characters: ")
+    if len(password) < 8:
+        print("Re-enter, password too short")
+print("Accepted")
+

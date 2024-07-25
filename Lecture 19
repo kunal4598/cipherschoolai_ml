@@ -1,0 +1,51 @@
+import pandas as pd
+import plotly.express as px 
+df=pd.read_csv('sample.csv')
+#print(df.head())
+df1=df.head()
+#1
+# fig=px.line(df1,x='Date',y='Sales',title='Sales over time',markers='True')
+# fig2=px.line(df,x='Date',y='Sales',title='Sales over time',markers='True')
+# fig.show()
+# fig2.show()
+#2
+# fig3=px.bar(df,x='Region',y='Sales',color='Region')
+# fig3.show()
+
+
+# #3
+# fig=px.scatter(df,x='Sales',y='Profit',color='Region',size='Quantity',hover_data=['Product'])
+
+# fig.show()
+
+# #4
+# fig1=px.histogram(df,x='Sales',y='Quantity',nbins=10,color="Region")
+# fig1.show()
+
+# #5
+# fig2=px.pie(df,values='Profit',names='Region')
+# fig2.show()
+
+# #6
+# fig=px.line(df1,x='Date',y='Sales',markers=True,color='Region',hover_data=['Product','Quantity','Profit'])
+# fig.show()
+
+
+#7
+data=pd.read_csv('data1.csv')
+data1 = pd.DataFrame({
+    'State': ['AL', 'AK', 'AZ', 'AR', 'CA'],  # Ensure these are the correct state abbreviations
+    'Population': [4903185, 731545, 7278717, 3017825, 39512223]
+})
+
+fig = px.choropleth(
+    data1,
+    locations='State',
+    locationmode='USA-states',
+    color='Population',
+    scope='usa',
+    title='Population'
+)
+
+fig.show()
+

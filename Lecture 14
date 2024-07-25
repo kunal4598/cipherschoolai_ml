@@ -1,0 +1,102 @@
+#Functions
+
+def add(a,b):
+    return a+b
+
+print (add(3,4))
+
+def greet(name , message="hi"):
+    print(name ,message);
+greet("John","Hello")
+greet("Walker")
+
+
+# def sqaure(a):
+#     return a**2
+
+# num= int(input("Enter the value of number :"))
+# c= sqaure(num)
+# print(c)
+# print("c = ",c)
+
+
+def sum_all(*args):
+    return sum(args)
+print (sum_all(1,2,3,4))
+
+
+def display_info9(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+display_info9(name="john" , cl=10, rollno= 12)
+
+
+def apply(func,x,y):
+    return func(x,y)
+
+def mul (a,b):
+    return a*b
+print(apply(mul,2,4))
+print(apply(add,4,3))
+
+
+#LAMBDA FUNCTIONS
+
+square= lambda x: x*x
+print(square(5)) 
+
+numbers=[1,2,3,4,5]
+squares= list(map(lambda x: x*x, numbers))
+print(squares)
+
+even= list(filter(lambda x: x%2==0,numbers))
+print(even)
+
+#sorted
+students =[("Alie", 25), ("Bob",20) , ("Charlie", 32)]
+sorted_students =sorted(students,key=lambda x: x[1])
+print(sorted_students)
+
+
+#Error handling
+try:
+    result= 10/0
+
+except ZeroDivisionError:
+    
+    print("cannot devide by 0!")
+
+
+
+try:
+    result =10/2
+
+except ZeroDivisionError:
+    
+    print("cannot devide by 0!")
+else:
+    print("Division successfull!")
+
+
+try:
+    result =10/23
+
+except ZeroDivisionError:
+    
+    print("cannot devide by 0!")
+else:
+    print("Division successfull!")
+finally:
+
+    print(" successfull execution")
+
+
+
+try:
+    number= int(input("enter a num"))
+    result 10/number
+except ValueError:
+    print("pls enter a num")
+except ZeroDivisionError:
+    print("Cannot divide by zero!")  

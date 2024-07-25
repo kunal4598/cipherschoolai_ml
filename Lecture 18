@@ -1,0 +1,130 @@
+import matplotlib.pyplot as plt
+import numpy as np
+#sublib
+
+
+#1
+#Data
+# x=[1,2,3,4,5,6]
+# y=[1,4,9,16,25,36]
+
+# #create a line plot
+# plt.plot(x,y,ls="-.",color="y",lw="4")
+# plt.xlabel('X-axis')
+# plt.ylabel('Y-axis')
+# plt.title('Line Plot')
+# plt.show()
+
+#2
+
+# y1=np.array([1,3,8,10,5,15,2])
+# y2=np.array([2,6,16,20,10,30,4])
+# plt.plot(y1,marker="o",mfc="red")
+# plt.plot(y2,marker="o",mec="blue")
+# plt.show()
+
+
+#Scatter plots
+#3
+
+# x=[1,2,3,4,5]
+# y=[3,6,8,9,4]
+# plt.scatter(x,y,c="r",marker="o")
+# plt.xlabel('X-axis')
+# plt.ylabel('Y-axis')
+# plt.title('Scatter Plot')
+# plt.show()
+
+
+
+
+# bar plots
+#4
+
+# products=['pc','tv', 'ac','ref']
+# sales=[5,8,6,2]
+# plt.bar(products,sales,color="black",width=.1)
+# #plt.barh(products,sales,height=.1)
+# plt.xlabel('Products')
+# plt.ylabel('Sales (in 1000s)')
+# plt.title('bar plot')
+# plt.show()
+
+#histograms
+#5
+# data=[1,2,3,3,3,2,4,4,4,4,4,4,4,4,4,2,3]
+# plt.hist(data,bins=5,edgecolor="black",color="blue")
+# plt.xlabel('Values')
+# plt.ylabel('Frequency')
+# plt.title('Histogram')
+# plt.show()
+
+
+#subplots
+# x=[1,2,3,4,5]
+# y=[2,3,5,7,11]
+# y2=[3,4,6,7,2]
+
+# fig,axs=plt.subplots(2)
+# axs[0].plot(x,y)
+# axs[0].set_title('First plot')
+# axs[1].plot(x,y2)
+# axs[1].set_title('Second plot')
+
+# plt.tight_layout()
+# plt.show()
+
+# plt with annotations
+
+# x=[1,2,3,4,5]
+# y=[2,3,5,7,11]
+# plt.plot(x,y)
+# plt.xlabel('X-axis')
+# plt.ylabel('Y-axis')
+# plt.title('Plot with annotations')
+# plt.annotate('local max',xy=(5,11),xytext=(4,8),arrowprops=dict(facecolor="black",shrink=0.05))
+# plt.show()
+
+
+
+import seaborn as sns
+
+
+# x=[1,2,3,4,5]
+# y=[2,3,4,7,11]
+
+
+#1 line plot
+# sns.lineplot(x=x,y=y)
+# plt.xlabel('X')
+# plt.ylabel('Y')
+
+# plt.show()
+
+# #2 scatter plot
+# sns.scatterplot(x=x,y=y)
+# plt.show()
+
+#3 barplot
+
+# categories=['a','b','c']
+# values=[10,20,30]
+# sns.barplot(x=categories,y=values)
+# plt.show()
+
+
+#4 histogram
+# data=[1,2,2,3,3,3,4,4]
+# sns.histplot(data,bins=4)
+# plt.show()
+
+#heatmap
+data=np.random.rand(10,12)
+sns.heatmap(data)
+plt.title('heatmap')
+plt.show()
+
+
+
+
+
